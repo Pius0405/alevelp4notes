@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Pius">
+        <meta name="description" content="This page is about 9618 ALevel computer science paper 4">
+        <title>File handling</title>
+        <link rel="icon" href="html5.png" type="image/x-icon">
+        <link rel="stylesheet" href="main.css" type="text/css">
+    </head>
+
+    <body>
+        <header>
+            <h1>File handling</h1>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#filemode">File modes</a>
+                    </li>
+                    <li>
+                        <a href="#read">Read operations</a>
+                    </li>
+                    <li>
+                        <a href="#write">Write operations</a>
+                    </li>
+                    <li>
+                        <a href="#randomfile">Random file</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <br>
+        <hr>
+        <section id="filemode">
+            <h2>File modes</h2>
+            <ol>
+                <li>
+                    <p><strong><code>'r'</code></strong></p>
+                    <p>Opens a file for reading only</p>
+                </li>
+                <li>
+                    <p><strong><code>'w'</code></strong></p>
+                    <p>Opens a file for writting only</p>
+                    <p>If the file exists it overwrites the whole file, 
+                        otherwise it creates a new file for writting</p>
+                </li>
+                <li>
+                    <p><strong><code>'a'</code></strong></p>
+                    <p>Opens a file for appending at the end of the file 
+                        If the file does not exists it creates a new file</p>
+                </li>
+            </ol>
+            <p><em>e.g. </em><code>thisFile = open('file.txt','r')</code></p>
+        </section>
+        <br>
+        <hr>
+        <section id="read">
+            <h2>Read operations</h2>
+            <ol>
+                <li>
+                    <p><strong><code>readline()</code></strong></p>
+                    <p>Reads a single line of the file</p>
+                </li>
+                <li>
+                    <p><strong><code>read()</code></strong></p>
+                    <p>Reads the whole content of the file</p>
+                </li>
+                <li>
+                    <p><strong><code>readlines()</code></strong></p>
+                    <p>Returns a list of all the lines read from the file</p>
+                </li>
+            </ol>
+        </section>
+        <br>
+        <hr>
+        <section id="write">
+            <h2>Write operation</h2>
+            <ol>
+                <li>
+                    <p><strong><code>write()</code></strong></p>
+                    <p>directly write a string which is passed as an argument to a file</p>
+                </li>
+                <li>
+                    <p><strong><code>writelines()</code></strong></p>
+                    <p>write multiple lines into a specific file, 
+                        with a list of string elements passed as an argument</p>
+                </li>
+            </ol>
+            <p><mark> Always close a file after opening it! </mark></p>
+            <p>
+                <em>e.g.</em>
+                <strong><code>thisFile.close()</code></strong>
+            </p>
+        </section>
+        <br>
+        <hr>
+        <section id="randomfile">
+            <h2>Random file</h2>
+            <ol>
+                <li>
+                    <p>Library used : pickle</p>
+                    <p><strong><code>import pickle</code></strong></p>
+                </li>
+                <li>
+                    <p>Write a whole record to the file</p>
+                    <p><strong><code>pickle.dump(&lt;record&gt;,&lt;filename&gt;)</code></strong></p>
+                </li>
+                <li>
+                    <p>Read a record from the file</p>
+                    <p><strong><code>pickle.load(&lt;filename&gt;)</code></strong></p>
+                </li>
+                <li>
+                    <p>Move file pointer to point to a location</p>
+                    <p><strong><code>file.seek(&lt;address&gt;)</code></strong></p>
+                </li>
+                <li>
+                    <p>Use a hashing function to calculate an address from the record key</p>
+                    <p><em>e.g. </em><strong><code>hash(thisCar.vehicleID)</code></strong></p>
+                </li>
+            </ol>
+        </section>
+        <br>
+        <footer>
+            <a href="#">Back to top</a>
+        </footer>
+    </body>
+</html>
+    

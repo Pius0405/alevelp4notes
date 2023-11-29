@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Pius">
+        <meta name="description" content="This page is about Abstract data types">
+        <title>Abstract data type</title>
+        <link rel="icon" href="html5.png" type="image/x-icon">
+        <link rel="stylesheet" href="main.css" type="text/css">
+    </head>
+    <body>
+        <header>
+            <h1>
+                Abstract data type
+            </h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#stack">Stack</a>
+                </li>
+                <li>
+                    <a href="#queue">Queue</a>
+                </li>
+                <li>
+                    <a href="#linkedlist">Linked list</a>
+                </li>
+                <li>
+                    <a href="#binarytree">Binary tree</a>
+                </li>
+                <li>
+                    <a href="#recursion">Binary tree traversals using recursion</a>
+                </li>
+            </ul>
+        </nav>
+        </header>
+        <br>
+        <hr>
+        <section id="stack">
+            <h2>Stack</h2>
+            <ol>
+                <li>
+                    <h3>Initialise a stack and the pointer</h3>
+                    <p><em>Example code:</em></p>
+                    <figure>
+                        <img src="./codeimg/initialisestack.png" alt="A stack">
+                        <figcaption>
+                            A stack of maximum 10 items
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <h3>PUSH operation</h3>
+                    <figure>
+                        <img src="./codeimg/push.png" alt="Push operation" loading="lazy">
+                    </figure>
+                </li>
+                <li>
+                    <h3>POP operation</h3>
+                    <figure>
+                        <img src="./codeimg/pop.png" alt="Pop operation" loading="lazy">
+                    </figure>
+                </li>
+            </ol>
+            <p><strong>A stack works on a Last In First Out basis.</strong></p>
+        </section><br>
+
+        <hr>
+
+        <section id="queue">
+            <h2>Queue</h2>
+            <ol>
+                <li>
+                    <h3>Initialise a circular queue and the pointers</h3>
+                    <p><em>Example code:</em></p>
+                    <figure>
+                        <img src="./codeimg/initialisequeue.png" alt="A queue" loading="lazy">
+                        <figcaption>
+                            A circular queue of maximum 10 items
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <h3>Enqueue</h3>
+                    <p><em>Example code:</em></p>
+                    <figure>
+                            <img src="./codeimg/enqueue.png" alt="Enqueue" loading="lazy">
+                    </figure>
+                </li>
+                <li>
+                    <h3>Dequeue</h3>
+                    <p><em>Example code:</em></p>
+                    <figure>
+                        <img src="./codeimg/dequeue.png" alt="Dequeue" loading="lazy">
+                    </figure>
+                </li>
+            </ol>
+            <p><strong>A queue works on a First In First Out basis.</strong></p>
+        </section><br>
+
+        <hr>
+
+        <section id="linkedlist">
+            <h2>Linked list</h2>
+            <p><strong>**There are many different ways of implementing a linked list.</strong></p>
+            <p><strong>The example here uses a <mark>record type to represent the nodes and a 1D array to store the nodes</mark>.</strong></p>
+            <p><strong>Other methods are e.g. using <mark>two 1D arrays </mark>or <mark>a 2D array</mark>.</strong></p>
+            <br>
+            <ol>
+                <li>
+                    <h3>Initialise a linked list</h3>
+                    <p><em>Example code:</em></p>
+                    <figure>
+                        <img src="./codeimg/initialiselinked.png" alt="Initialise a linked list" loading="lazy">
+                        <figcaption>
+                            Declare record type for each node and store the nodes in an array
+                        </figcaption>
+                    </figure>
+                </li>
+                <li>
+                    <h3>Add a new node</h3>
+                    <p><em>Example code:</em></p>
+                    <figure>
+                        <img src="./codeimg/addnode.png" alt="Add new node" loading="lazy">
+                    </figure>
+                </li>
+                <li>
+                    <h3>Delete a node</h3>
+                    <p><em>Example code:</em></p>
+                    <figure>
+                        <img src="./codeimg/deletenode.png" alt="Delete a node" loading="lazy">
+                    </figure>
+                </li>
+                <li>
+                    <h3>Search for a node</h3>
+                    <p><em>Example code:</em></p>
+                    <figure>
+                        <img src="./codeimg/searchnode.png" alt="Search for a node" loading="lazy">
+                    </figure>
+                </li>
+            </ol>
+        </section><br>
+
+        <hr>
+
+        <section id="binarytree">
+            <h2>Binary Tree</h2>
+            <p><strong>The binary tree here is implemented 
+                using a record type for nodes and a 1D array.</strong></p>
+            <p><strong>A binary tree can also be implemented differently e.g. using a 2D array.</strong></p>
+            <ol>
+                <li>
+                    <h3>Initialise a binary tree</h3>
+                    <p><em>Example code:</em></p>
+                    <figure>
+                        <img src="./codeimg/initialisebinary.png" alt="Initialise a binary tree" loading="lazy">
+                    </figure>
+                </li>
+                <li>
+                    <h3>Insert a new node</h3>
+                    <p><em>Example code:</em></p>
+                    <figure>
+                        <img src="./codeimg/insertnode.png" alt="Insert a node" loading="lazy">
+                    </figure>
+                </li>
+                <li>
+                    <h3>Search</h3>
+                    <p><em>Example code:</em></p>
+                    <figure>
+                        <img src="./codeimg/searchnodebinary.png" alt="Search for a node" loading="lazy">
+                    </figure>
+                </li>
+            </ol>
+        </section>
+        
+        <br>    
+
+        <hr>
+
+        <section id="recursion">
+            <h2>Additional: Binary tree traversals using recursion</h2>
+            <ol>
+                <li>
+                    <h3>In order traversal</h3>
+                    <p><em>Example code:</em></p>
+                    <figure>
+                        <img src="./codeimg/inorder.png" alt="In order traversal" loading="lazy">
+                    </figure>
+                </li>
+                <li>
+                    <h3>Pre order traversal</h3>
+                    <p><em>Example code:</em></p>
+                    <figure>
+                        <img src="./codeimg/preorder.png" alt="Pre order traversal" loading="lazy">
+                    </figure>
+                </li>
+                <li>
+                    <h3>Post order traversal</h3>
+                    <p><em>Example code:</em></p>
+                    <figure>
+                        <img src="./codeimg/postorder.png" alt="Post order traversal">
+                    </figure>
+                </li>
+            </ol>
+        </section>
+
+        <br>
+
+        <footer>
+            <a href="#">Back to top</a>
+        </footer>
+    </body>
+</html>

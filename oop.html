@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Pius">
+        <meta name="description" content="This page is about Object-oriented programming (OOP)">
+        <title>Object-oriented prorgamming</title>
+        <link rel="icon" href="html5.png" type="image/x-icon">
+        <link rel="stylesheet" href="main.css" type="text/css">
+    </head>
+
+    <body>
+        <header>
+            <h1>Object-oriented programming</h1>
+            <p>Object-oriented programming is a programming paradigm that uses classes and objects.</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#termsAndDefinitions">Terms and Definitions</a></li>
+                    <li><a href="#basics">Basics</a></li>
+                    <li><a href="#inheritance">Inheritance</a></li>
+                    <li><a href="#polymorphism">Polymorphism</a></li>
+                    <li><a href="#containment">Containment</a></li>
+                </ul>
+            </nav>
+        </header>
+        <br>
+        <hr>
+        <section id="termsAndDefinitions">
+            <h2>Temrs and Definitions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Term</th>
+                        <th scope="col">Definition</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Class</td>
+                    <td>A template defining the methods and data of a certain type of object</td>
+                </tr>
+                <tr>
+                    <td>Object</td>
+                    <td>An instance of a class</td>
+                </tr>
+                <tr>
+                    <td>Instance</td>
+                    <td>An occurence of an object</td>
+                </tr>
+                <tr>
+                    <td>Encapsulation</td>
+                    <td>Putting data and methods together as a single unit (a class)</td>
+                </tr>
+                <tr>
+                    <td>Attributes</td>
+                    <td>The data items of a class</td>
+                </tr>
+                <tr>
+                    <td>Methods</td>
+                    <td>The subroutines of a class acting on the attributes</td>
+                </tr>
+                <tr>
+                    <td>Getter</td>
+                    <td>A method used to return the value of a property</td>
+                </tr>
+                <tr>
+                    <td>Setter</td>
+                    <td>A method used to update the value of a property</td>
+                </tr>
+                <tr>
+                    <td>Inheritance</td>
+                    <td>The capability of defining a new derived class that has all attributes and methods
+                        from the parent class
+                    </td>
+                </tr>
+                <tr>
+                    <td>Polymorphism</td>
+                    <td>Methods can be redefined for derived classes</td>
+                </tr>
+                <tr>
+                    <td>Containment</td>
+                    <td>A relationship in where a class has a component that is of the other class type</td>
+                </tr>
+            </table>
+        </section>
+        <br>
+        <hr>
+        <section id="basics">
+            <header>
+                <h2>Basics</h2>
+            </header>
+            <ol>
+                <li>
+                    <p>Create a class</p>
+                    <p><em>e.g.</em><code> class Car:</code></p>
+                </li>
+                <li>
+                    <p>Constructor</p>
+                    <p><em>e.g.</em><code>def __init__(self,name):</code></p>
+                </li>
+                <li>
+                    <p>Attributes</p>
+                    <p><em>e.g.</em><code>self.__name = name</code></p>
+                    <p>
+                        <strong>There must be two underscore characters 
+                            before an attribute as it is <mark>private</mark>.</strong>
+                    </p>
+                    <p>
+                        <strong>Attributes from a class can only be accessed 
+                            through the class methods.</strong>
+                    </p>
+                    <p>
+                        <strong> All methods are <mark>public</mark> 
+                            as they can be called from the main program.</strong>
+                    </p>
+                </li>
+            </ol>
+        </section>
+        <br>
+        <hr>
+        <section id="inheritance">
+            <header>
+                <h2>Inheritance</h2>
+            </header>
+            <em>Example code:</em>
+            <br>
+            <br>
+            <fieldset>
+                <section id="code">
+                    <p><code>class Employee:</code></p>
+                    <p><code>&nbsp;&nbsp;def __init__(self,name,age,salary):</code></p>
+                    <p><code>&nbsp;&nbsp;&nbsp;&nbsp;self.__name = name</code></p>
+                    <p><code>&nbsp;&nbsp;&nbsp;&nbsp;self.__age = age</code></p>
+                    <p><code>&nbsp;&nbsp;&nbsp;&nbsp;self.__salary = salary</code></p>
+                    <p><code>&nbsp;&nbsp;def ShowDetails(self):</code></p>
+                    <p><code>&nbsp;&nbsp;&nbsp;&nbsp;print(self.__name)</code></p>
+                    <p><code>&nbsp;&nbsp;&nbsp;&nbsp;print(self.__age)</code></p>
+                    <p><code>&nbsp;&nbsp;&nbsp;&nbsp;print(self.__salary)</code></p>
+                    <p><code><mark>class Manager(Employee):</mark></code></p>
+                    <p><code>&nbsp;&nbsp;def __init__(self,name,age,salary,managerOffice):</code></p>
+                    <p><code>&nbsp;&nbsp;&nbsp;&nbsp;<mark>Employee.__init__(self,name,age,salary)</mark></code></p>
+                    <p><code>&nbsp;&nbsp;&nbsp;&nbsp;self.__managerOffice = managerOffice</code></p>
+                    <p><code>&nbsp;&nbsp;def showDetails(self):</code></p>
+                    <p><code>&nbsp;&nbsp;&nbsp;&nbsp;<mark>Employee.ShowDetails(self)</mark></code></p>
+                    <p><code>&nbsp;&nbsp;&nbsp;&nbsp;print(self.__managerOffice)</code></p>
+                </section>
+            </fieldset><br>
+            <p><strong>Employee is the <mark>parent class
+                </mark>while Manager is the <mark>derived class</mark>.</strong></p>
+            <p><strong>Derived class <mark>Manager</mark> has all attributes and methods from
+                parent class <mark>Employee</mark></strong></p>
+        </section>
+        <br>
+        <hr>
+        <section id="polymorphism">
+            <header>
+                <h2>Polymorphism</h2>
+            </header>
+            <p>Using the same Employee and Manager classes defined for Inheritance part,</p>
+            <a href="#code">Click here to refer back to the code</a>
+            <p><em>Example code:</em></p>
+            <fieldset>
+                <dl>
+                    <dt><strong>ShowDetails method defined in parent class:</strong></dt>
+                    <dd>
+                        <p><code>&nbsp;&nbsp;def ShowDetails(self):</code></p>
+                        <p><code>&nbsp;&nbsp;&nbsp;&nbsp;print(self.__name)</code></p>
+                        <p><code>&nbsp;&nbsp;&nbsp;&nbsp;print(self.__age)</code></p>
+                        <p><code>&nbsp;&nbsp;&nbsp;&nbsp;print(self.__salary)</code></p>
+                    </dd>
+                    <dt><strong>ShowDetails method defined in derived class:</strong></dt>
+                    <dd>
+                        <p><code>&nbsp;&nbsp;def showDetails(self):</code></p>
+                        <p><code>&nbsp;&nbsp;&nbsp;&nbsp;Employee.ShowDetails(self)</code></p>
+                        <p><code>&nbsp;&nbsp;&nbsp;&nbsp;print(self.__managerOffice)</code></p>
+                    </dd>
+                </dl>
+            </fieldset>
+            <p><strong>The ShowDetails method from the base class is defined differently and behaves differently
+                in the derived class.</strong></p>
+        </section><br>
+
+        <hr>
+
+        <section id="containment">
+            <header>
+                <h2>Containment</h2>
+            </header>
+
+            <p><em>Example code:</em></p>
+            <fieldset>
+                <p><code>class Course:</code></p>
+                <p><code>&nbsp;&nbsp;def __init__(self, t, m):</code></p>
+                <p><code>&nbsp;&nbsp;&nbsp;&nbsp;self.__CourseTitle = t</code></p>
+                <p><code>&nbsp;&nbsp;&nbsp;&nbsp;self.__MaxStudents = m</code></p>
+                <p><code>&nbsp;&nbsp;&nbsp;&nbsp;self.__NumberOfLessons = 0</code></p>
+                <p><code>&nbsp;&nbsp;&nbsp;&nbsp;self.__CourseLesson = []</code></p>
+                <p><code>&nbsp;&nbsp;def AddLesson(self, t, d, r):</code></p>
+                <p><code>&nbsp;&nbsp;&nbsp;&nbsp;self.__NumberOfLessons = self.__NumberOfLessons + 1</code></p>
+                <p><code>&nbsp;&nbsp;&nbsp;&nbsp;self.__CourseLesson.append(<mark>Lesson(t, d, r)</mark>)</code></p>
+                <p><code>&nbsp;&nbsp;def OutputCourseDetails(self):</code></p>
+                <p><code>&nbsp;&nbsp;&nbsp;&nbsp;print(self.__CourseTitle, "Maximum number: ", self.__MaxStudents)</code></p>
+                <p><code>&nbsp;&nbsp;&nbsp;&nbsp;for i in range(self.__NumberOfLessons):</code></p>
+                <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('Lesson',str(i+1))</code></p>
+                <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(self.__CourseLesson[i].OutputLessonDetails())</code></p>
+                <br>
+                <p><code>class Lesson:</code></p>
+                <p><code>&nbsp;&nbsp;def __init__(self,t,d,r):</code></p>
+                <p><code>&nbsp;&nbsp;&nbsp;&nbsp;self.__LessonTitle = t</code></p>
+                <p><code>&nbsp;&nbsp;&nbsp;&nbsp;self.__Duration = d</code></p>
+                <p><code>&nbsp;&nbsp;&nbsp;&nbsp;self.__RequiresLab = r</code></p>
+                <p><code>&nbsp;&nbsp;def OutputLessonDetails(self):</code></p>
+                <p><code>&nbsp;&nbsp;&nbsp;&nbsp;print('Title:',self.__LessonTitle)</code></p>
+                <p><code>&nbsp;&nbsp;&nbsp;&nbsp;print('Duration',self.__Duration)</code></p>
+                <p><code>&nbsp;&nbsp;&nbsp;&nbsp;if self.__RequiresLab:</code></p>
+                <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('Requires lab')</code></p>
+                <p><code>&nbsp;&nbsp;&nbsp;&nbsp;else:</code></p>
+                <p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print('No lab required')</code></p>
+            </fieldset>
+        </section>
+
+        <br>
+
+        <footer>
+            <p><a href="#">Back to top</a></p>
+        </footer>
+
+    </body>
+</html>
